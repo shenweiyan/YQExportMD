@@ -48,10 +48,13 @@ pip install -r requirements.txt
 知识库 [https://www.yuque.com/YourYuqueUserName](https://www.yuque.com/YourYuqueUserName)  对应的 *namespace* 为 *YourYuqueUserName*
 
 ## 获取 token
-![token](https://s3.jpg.cm/2021/08/17/IUIASp.png)
+![2022 11 22-10 50 01](https://user-images.githubusercontent.com/26101369/203209965-f664a352-a2ef-4a02-934b-588d3e657972.png)
+![2022 11 22-10 55 10](https://user-images.githubusercontent.com/26101369/203209990-fd178ebc-8a8c-4c5d-9c26-f2f81fd414ed.png)
+
+
 ## 使用 python3 运行
 ```bash
-python ExportMD.py
+python3 ExportMD.py
 ```
 ## 输入namespace和token
 `⬆ ⬇`移动，`space`选择，`a`全选，`Enter`确认

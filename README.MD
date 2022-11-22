@@ -31,12 +31,13 @@ https://github.com/stone0090/ExportMD-rectify-pics/blob/bf2b79ef0afaffcad78253ca
 
 
 ## 2、安装
+
 ### 环境要求
  - python >= 3.6
 
 ### 安装 python 依赖
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 ---
 
@@ -56,7 +57,9 @@ pip install -r requirements.txt
 ```bash
 python3 ExportMD.py
 ```
-## 输入namespace和token
-`⬆ ⬇`移动，`space`选择，`a`全选，`Enter`确认
-![image](https://user-images.githubusercontent.com/61380549/162611337-9b2f875f-6cf0-47d6-87ba-6aa6a7f5efef.png)
+## 输入 namespace 和 token
+**`⬆ ⬇`移动，`space`选择，`a`全选，`i`反选，`Enter`确认** 
+![2022 11 22-11 18 33](https://user-images.githubusercontent.com/26101369/203213817-7d84fab2-e6a0-4bee-905d-9d59ccc1dc3a.png)
+![2022 11 22-11 24 04](https://user-images.githubusercontent.com/26101369/203213842-e0e79258-d145-474a-88fb-c285f3e5da26.png)
+
 

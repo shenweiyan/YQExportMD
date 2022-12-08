@@ -1,26 +1,26 @@
-# ExportMD-rectify-pics
+# YQExportMD
+#
 ## 1、写在前面
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT-yellow) ![python](https://img.shields.io/badge/python->=3.6-orange)
 
-简介：ExportMD语雀知识库自动导出为 Markdown 格式，支持同时导出多个知识库。
-但ExportMD导出连续三张图片时，会出现错误，只有第一张图片的内容会被识别，本复刻版本增加了正则表达式，修复这一情况
+简介：ExportMD 语雀知识库自动导出为 Markdown 格式，支持同时导出多个知识库。但 ExportMD 导出连续三张图片时，会出现错误，只有第一张图片的内容会被识别，本复刻版本增加了正则表达式，修复这一情况。
 
-本复刻版本无法提交issue，有问题欢迎到[语雀评论区](https://www.yuque.com/duzh929/blog/ocffqg)和我交流！  
+本复刻版本无法提交 issue，有问题欢迎到语雀评论区和我交流！  
 
-欢迎给我的语雀文档点赞，或者给我复刻的仓库star  
+- ExportMD-rectify-pics 语雀评论区：https://www.yuque.com/duzh929/blog/ocffqg
 
-另外我想说明一下，复刻这个仓库的目的是为了防止重要的笔记丢失，让大家能够有一个本地的markdown笔记备份，但我并不希望语雀因此流失用户，语雀真的是一款非常优秀的笔记软件，我会一直支持下去的！
+- YQExportMD 语雀评论区：https://www.yuque.com/shenweiyan/wow/qbo2xht7s4gdcns3
+
+欢迎给我的语雀文档点赞，或者给我复刻的仓库 star！  
+
+另外我想说明一下，复刻这个仓库的目的是为了防止重要的笔记丢失，让大家能够有一个本地的 markdown 笔记备份，但我并不希望语雀因此流失用户，语雀真的是一款非常优秀的笔记软件，我会一直支持下去的！
 
 
-### 版本v1.0
-API导出连着的图片时，会出现很多`<br />`，这时连续图片中只有第一张图片会被识别
-```
-![image.png](https://cdn.nlark.com/xxx1.png)<br />![image.png](https://cdn.nlark.com/xxx2.png)<br />![image.png](https://cdn.nlark.com/xxx3.png)
+### 版本 v1.x
+在原有程序基础上增加了一些其他的使用小程序，如导出语雀的单篇文档, 并根据需要转换成 Hugo 格式博文等，以满足个人使用需要，也为后续需要的用户提供参考。
 
-```
-为了解决这一问题，在原来的ExportMD基础上，我增加了正则表达式，现在连续图片的导出已经没有问题
-这里特别感谢ExportMD！
-### 版本v1.1
+
+### 版本 v1.1
 实际使用的时候有遇到一些小问题，主要是接口限制等会导致有时候请求失败
 这里使用[@stone0090](https://github.com/stone0090/ExportMD-rectify-pics)的解决方案  
 
@@ -29,6 +29,14 @@ https://github.com/stone0090/ExportMD-rectify-pics/blob/bf2b79ef0afaffcad78253ca
 修改为同步导出，且每次导出等待100ms
 本人技术水平有限，感谢[@stone0090](https://github.com/stone0090/ExportMD-rectify-pics)!的修复
 
+### 版本 v1.0
+API 导出连着的图片时，会出现很多`<br />`，这时连续图片中只有第一张图片会被识别
+```
+![image.png](https://cdn.nlark.com/xxx1.png)<br />![image.png](https://cdn.nlark.com/xxx2.png)<br />![image.png](https://cdn.nlark.com/xxx3.png)
+
+```
+为了解决这一问题，在原来的ExportMD基础上，我增加了正则表达式，现在连续图片的导出已经没有问题
+这里特别感谢 ExportMD！
 
 ## 2、安装
 

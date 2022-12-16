@@ -1,5 +1,5 @@
 prettytable
 aiohttp
-PyInquirer
+PyInquirer==1.0.0
 Colr
 python-cfonts

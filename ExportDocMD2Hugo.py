@@ -21,9 +21,9 @@ def __main__():
     usage = usage + "    3. -o 自动保存为 create_at-slug.md 格式的文件, 如 2022-12-08-try-yuque-api.md 。"
     parser = optparse.OptionParser(usage=usage)
     parser.add_option("-u", "--url", dest="url", help="文章的 URL 访问地址")
-    parser.add_option("-s", "--site", dest="site", default="cos.shenlab.cn", help="镜像回源的 URL 地址")
-    parser.add_option("-t", "--tag", dest="tag", default="", help="文章的 TAG 标签, 多个标签用分号分隔")
-    parser.add_option("-o", "--out", dest="out", action="store_true", default=False, help="保存为 md 文档")
+    parser.add_option("-s", "--site", dest="site", default="cos.shenlab.cn", help="镜像回源的 URL 地址 (默认: cos.shenlab.cn)")
+    parser.add_option("-t", "--tag", dest="tag", default="", help="文章的 TAG 标签, 多个标签用分号分隔 (默认: '')")
+    parser.add_option("-o", "--out", dest="out", action="store_true", default=False, help="保存为 md 文档 (默认: create_at-slug.md) ")
 
     opts, args = parser.parse_args()
     if not opts.url:

@@ -56,7 +56,7 @@ def __main__():
             tags_list.append(t)
     tags = '[\"%s\"]' % ('\",\"'.join(tags_list))
 
-    post_meata = "---\ntitle: '%s'\nslug: '%s'\ndate: '%s'\nlastmod: '%s'\ntype: posts\npublished: true\nauthor: 沈维燕\ntags: %s\n---\n\n" % (title, slug, create, update, tags)
+    post_meata = "---\ntitle: '%s'\nslug: '%s'\ntype: posts\ntags: %s\ndate: '%s'\nlastmod: '%s'\nauthor: 沈维燕\npublished: true\n---\n\n" % (title, slug, tags, create, update)
     post_meata = post_meata + "> 📢 本文章同步自作者的[语雀知识库](https://www.yuque.com/shenweiyan/)，请点击[这里](%s)阅读原文。\n\n" % url
 
     md_url = url.strip("/")+'/markdown?plain=true&linebreak=false&anchor=false'
@@ -70,7 +70,7 @@ def __main__():
     #pattern = r"!\[(?P<img_name>.*?)\]" \
     #          r"\((?P<img_src>https:\/\/cdn\.nlark\.com\/(?P<img_pre>yuque.*\/(?P<slug>\d+))\/(?P<filename>.*?\.[a-zA-z]+)).*\)"
     pattern  = r"!\[(?P<img_name>.*?)\]" \
-               r"\((?P<yuque_imgurl>(?P<cdn_lark>https://cdn\.nlark\.com)/(?P<img_pre>yuque/[0-9]*/\d+/[\w]*/\d+)/(?P<filename>[\w-]*\.[a-zA-Z]*))[^!]*\)"
+               r"\((?P<yuque_imgurl>(?P<cdn_lark>https://cdn\.nlark\.com)/(?P<img_pre>yuque/[0-9]*/\d+/[\w]*/\d+)/(?P<filename>[\w-]*\.[a-zA-Z]*))\)"
     repl     = r"![\g<img_name>](https://%s/\g<img_pre>/\g<filename>)" % site
     new_body = re.sub(pattern, repl, body)
 

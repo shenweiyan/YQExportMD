@@ -74,6 +74,13 @@ def __main__():
     repl     = r"![\g<img_name>](https://%s/\g<img_pre>/\g<filename>)" % site
     new_body = re.sub(pattern, repl, body)
 
+    if new_body == body:
+        print("执行图片第二次匹配 ...")
+    pattern2 = r"!\[(?P<img_name>.*?)\]" \
+               r"\((?P<img_src>https:\/\/cdn\.nlark\.com\/(?P<img_pre>yuque.*\/(?P<slug>\d+))\/(?P<filename>.*?\.[a-zA-z]+)).*\)"
+    repl2    = r"![\g<img_name>](https://%s/\g<img_pre>/\g<filename>)" % site
+    new_body = re.sub(pattern2, repl2, new_body) 
+
     if out:
         with open(outfile, "w") as md:
             md.write(post_meata+new_body)

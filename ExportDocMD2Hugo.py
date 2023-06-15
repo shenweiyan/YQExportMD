@@ -57,7 +57,7 @@ def __main__():
     tags = '[\"%s\"]' % ('\",\"'.join(tags_list))
 
     post_meata = "---\ntitle: '%s'\nslug: '%s'\ntype: posts\ntags: %s\ndate: '%s'\nlastmod: '%s'\nauthor: 沈维燕\npublished: true\n---\n\n" % (title, slug, tags, create, update)
-    post_meata = post_meata + "> 📢 本文章同步自作者的[语雀知识库](https://www.yuque.com/shenweiyan/)，请点击[这里](%s)阅读原文。\n\n" % url
+    post_meata = post_meata + "> 📢 本文章同步自作者的[语雀知识库](https://www.yuque.com/shenweiyan/)，文章部分内容已经更新，请点击[这里](%s)阅读最新原文。\n\n" % url
 
     md_url = url.strip("/")+'/markdown?plain=true&linebreak=false&anchor=false'
     md_res = requests.request("GET", md_url, headers=headers)
